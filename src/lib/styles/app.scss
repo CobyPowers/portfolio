@@ -1,0 +1,143 @@
+@use "colors";
+@use "buttons";
+@use "settings";
+@use "sections/import";
+
+@import "https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Pacifico&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Pacifico&display=swap";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+
+  color: inherit;
+  background-color: inherit;
+  border: none;
+}
+
+body {
+  display: flex;
+
+  font-family: "JetBrains Mono", monospace;
+  font-weight: normal;
+  font-size: 16px;
+
+  color: colors.$foreground-primary;
+  background-color: colors.$background-primary;
+
+  margin-left: settings.$sidebar-width;
+  margin-top: 20vh;
+}
+
+.text {
+  &--signature {
+    font-family: "Pacifico", cursive;
+    font-size: 1.5em;
+    color: colors.$foreground-tertiary;
+  }
+
+  &--blue {
+    color: colors.$blue;
+  }
+}
+
+h1 {
+  font-size: 3.5em;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+h3 {
+  font-size: 2.5em;
+}
+
+h4 {
+  font-size: 2em;
+}
+
+h5 {
+  font-size: 1.5em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 0.8em;
+}
+
+.sidebar-container {
+  position: fixed;
+  left: calc(50% - (settings.$sidebar-width * 0.75) - (settings.$section-width * 0.5));
+  top: 20vh;
+  width: settings.$sidebar-width;
+  height: fit-content;
+  padding: 3.5em 0;
+  border-right: 1px solid colors.$background-tertiary;
+}
+
+.sidebar {
+  &__top-container,
+  &__bottom-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 0;
+    gap: 1.25em;
+  }
+
+  &__top-container {
+    padding-top: 0;
+    border-bottom: 1px solid colors.$background-tertiary;
+  }
+
+  &__portrait {
+    display: block;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    border-radius: 1.75em;
+    border: 0.5em solid colors.$background-primary;
+  }
+
+  &__portrait-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 11m;
+    height: 11em;
+    background: linear-gradient(-45deg, colors.$purple, colors.$orange);
+    border-radius: 2em;
+  }
+}
+
+.section-container {
+  width: settings.$section-width;
+  height: 100%;
+  margin: auto;
+  padding-top: 4.5em;
+  line-height: 1.6em;
+  overflow-wrap: none;
+
+  h1, h2, h3, h4, h5, h6 {
+      margin-bottom: 1.25em;
+  }
+
+  & .text--signature {
+    display: inline-block;
+    margin-top: 0.75em;
+  }
+}
+

@@ -1,0 +1,60 @@
+@use 'sass:color';
+@use "colors";
+
+.social-media-button {
+  display: block;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 0.5em;
+  background: linear-gradient(colors.$background-tertiary, colors.$background-secondary);
+
+  &__container {
+    display: flex;
+    gap: 0.5em;
+  }
+
+  &--blue {
+    border-top: 2px solid colors.$blue;
+  }
+
+  &--pink {
+    border-top: 2px solid colors.$pink;
+  }
+
+  &--orange {
+    border-top: 2px solid colors.$orange;
+  }
+}
+
+.nav-button {
+  position: relative;
+  display: block;
+  width: 10em;
+  height: 3em;
+  border-radius: 0.5em;
+  border-top: 1px solid colors.$foreground-tertiary;
+  background: linear-gradient(colors.$background-tertiary, colors.$background-secondary);
+  text-transform: uppercase;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25em;
+  }
+
+  &--active::before,
+  &--inactive::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0.45em;
+    height: 1.25em;
+    background-color: colors.$background-primary;
+    border-radius: 0 4px 4px 0;
+  }
+
+  &--active::before {
+    background: linear-gradient(colors.$blue, color.adjust(colors.$blue, $alpha: -0.5));
+    border: 2px solid colors.$background-secondary;
+  }
+}
