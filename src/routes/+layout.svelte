@@ -3,7 +3,7 @@
 
   import Sidebar from "$lib/components/Sidebar.svelte";
 
-  import favicon from "$lib/assets/favicon.svg";
+  import favicon from "$lib/assets/favicon.ico";
   import glow from "$lib/assets/glow.png";
 
   import "$lib/styles/app.scss";
