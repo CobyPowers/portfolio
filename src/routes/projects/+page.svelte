@@ -29,7 +29,7 @@
       briefing: "CodeCrafters Challenge",
       name: "Credis",
       description:
-        "Multi-threaded Redis server clone written in Rust. Features advanced command and RESP input parsing.",
+        "Multi-threaded toy Redis server written in Rust. Features advanced command and RESP input parsing.",
       year: 2026,
       logo: codecrafters,
       links: [

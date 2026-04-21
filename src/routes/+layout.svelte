@@ -18,6 +18,7 @@
 <Sidebar />
 
 <img class="body-glow" src={glow} alt="Glow" />
+<div class="body-fade"></div>
 
 {#key data.pathname}
   <section

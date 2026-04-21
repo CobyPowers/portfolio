@@ -70,6 +70,15 @@ body {
   user-select: none;
 }
 
+.body-fade {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(transparent 85%, colors.$background-primary);
+  z-index: 99;
+  pointer-events: none
+}
+
 h1 {
   font-size: 3.5em;
 }
