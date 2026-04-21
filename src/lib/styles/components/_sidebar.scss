@@ -14,6 +14,14 @@
   padding: settings.$sidebar-vertical-padding 0;
   border-right: 1px solid colors.$background-tertiary;
 
+  &__logo {
+    position: absolute;
+    fill: colors.$highlight;
+    top: 0; left: 0; right: 0;
+    margin: auto;
+    height: 2em;
+  }
+
   &__portrait-container,
   &__nav-container {
     display: flex;
@@ -60,7 +68,7 @@
     }
   }
 
-  &__cr-notice {
+  &__disclaimer{
     position: absolute;
     font-size: 0.8em;
     bottom: 0;

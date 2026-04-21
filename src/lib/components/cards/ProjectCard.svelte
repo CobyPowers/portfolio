@@ -33,7 +33,7 @@
       <p class="project-card__name">{name}</p>
       <div class="project-card__link-list">
         {#each links as link}
-          <a href={link.url} class="project-card__link">
+          <a href={link.url} target="_blank" class="project-card__link">
             <Icon icon={link.icon} />
           </a>
         {/each}

@@ -1,11 +1,13 @@
 <script lang="ts">
   import SocialMediaButton from "./buttons/SocialMediaButton.svelte";
   import NavButton from "./buttons/NavButton.svelte";
+  import Logo from "./Logo.svelte";
 
   import portrait from "$lib/assets/portrait.jpg";
 </script>
 
 <header class="sidebar">
+  <Logo class="sidebar__logo" />
   <div class="sidebar__portrait-container">
     <div class="sidebar__portrait-frame">
       <img class="sidebar__portrait" src={portrait} alt="Portrait" />
@@ -35,8 +37,10 @@
       <NavButton text="Education" url="/education" />
     </div>
   </nav>
-  <p class="sidebar__cr-notice">
-    Made with SvelteKit
+  <p class="sidebar__disclaimer">
+    <a href="https://github.com/CobyPowers/portfolio" target="_blank"
+      >Made with SvelteKit</a
+    >
     <br />
     <i>AI Not Included</i>
   </p>
