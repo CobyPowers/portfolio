@@ -1,0 +1,72 @@
+@use "../colors";
+
+.timeline-item {
+  display: flex;
+
+  &__marker-container {
+    position: relative;
+    width: 6em;
+
+    &.reduced {
+      & > span {
+        display: none;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &.first {
+      &::before {
+        top: 50%;
+        height: 50%;
+      }
+    }
+
+    &.last {
+      &::before {
+        height: 50%;
+      }
+    }
+
+    /* Year */
+    & > span {
+      position: absolute;
+      color: colors.$highlight;
+      transform: rotate(-90deg);
+      transform-origin: 50% 0;
+      top: 50%;
+      left: -0.75em;
+    }
+
+    /* Line */
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 50%;
+      width: 1px; 
+      height: 100%;
+      background-color: colors.$background-tertiary;
+    }
+
+    /* Circle */
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: calc(50% - 0.25em);
+      top: calc(50% - 0.25em);
+      width: 0.5em; 
+      height: 0.5em;
+      border-radius: 50%;
+      background-color: colors.$background-tertiary;
+    }
+  }
+
+  &__component-container {
+    width: fit-content;
+    padding: 0.5em 0;
+  }
+}

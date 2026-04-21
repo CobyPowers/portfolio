@@ -1,0 +1,25 @@
+@use "colors";
+
+.text {
+  &--signature {
+    font-family: "Pacifico", cursive;
+    font-size: 1.5em;
+    color: colors.$foreground-secondary;
+  }
+
+  &--orange {
+    color: colors.$orange;
+  }
+
+  &--purple {
+    color: colors.$purple;
+  }
+
+  &--pink {
+    color: colors.$pink;
+  }
+
+  &--blue {
+    color: colors.$blue;
+  }
+}

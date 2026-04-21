@@ -1,6 +1,8 @@
+@use "sass:color";
+
 $foreground-primary: #cdd6f4;
-$foreground-secondary: #bac2de;
-$foreground-tertiary: #a6adc8;
+$foreground-secondary: #a6adc8;
+$highlight: #585b70;
 $background-primary: #11111b;
 $background-secondary: #181825;
 $background-tertiary: #1e1e2e;
@@ -9,3 +11,6 @@ $orange: #fab387;
 $purple: #cba6f7;
 $pink: #f5c2e7;
 $blue: #89b4fa;
+
+$background-gradient-lightened: linear-gradient(color.adjust($background-tertiary, $lightness: 5), color.adjust($background-secondary, $lightness: 2));
+$background-gradient: linear-gradient($background-tertiary, $background-secondary);

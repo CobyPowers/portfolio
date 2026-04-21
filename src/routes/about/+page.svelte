@@ -23,8 +23,9 @@
 
 <br />
 
-<p>Thank you for Visiting,</p>
+<p>Thank you for visiting,</p>
 
+<br />
 <br />
 
 <span class="text--signature">Coby Powers</span>

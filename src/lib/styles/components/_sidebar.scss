@@ -1,0 +1,71 @@
+@use "sass:color";
+
+@use "../colors";
+@use "../settings";
+
+.sidebar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  left: max(calc(50% - (settings.$sidebar-width * 0.5) - (settings.$section-width * 0.5)), settings.$section-padding);
+  top: 20vh;
+  width: settings.$sidebar-width;
+  height: fit-content;
+  padding: settings.$sidebar-vertical-padding 0;
+  border-right: 1px solid colors.$background-tertiary;
+
+  &__portrait-container,
+  &__nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 0;
+    width: 100%;
+    gap: 1.25em;
+  }
+
+  &__portrait-container {
+    padding-top: 0;
+    border-bottom: 1px solid colors.$background-tertiary;
+  }
+
+  &__portrait {
+    display: block;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    border-radius: 1.75em;
+    border: 0.5em solid colors.$background-primary;
+  }
+
+  &__portrait-frame {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: settings.$portrait-size;
+    height: settings.$portrait-size;
+    background: linear-gradient(135deg, colors.$purple, colors.$orange);
+    border-radius: 2em;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: calc(100% - 8px);
+      height: calc(100% - 8px);
+      background: linear-gradient(135deg, color.adjust(colors.$purple, $lightness: 10), color.adjust(colors.$orange, $lightness: 17));
+      mix-blend-mode: color;
+      border-radius: 2em;
+    }
+  }
+
+  &__cr-notice {
+    position: absolute;
+    font-size: 0.8em;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: colors.$highlight;
+  }
+}

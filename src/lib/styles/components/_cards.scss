@@ -1,0 +1,143 @@
+@use "../colors";
+@use "../settings";
+
+.project-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.project-card {
+  position: relative;
+  display: flex;
+  font-family: "Poppins";
+  gap: 1.5em;
+
+  &__briefing {
+    color: colors.$highlight;
+    text-transform: uppercase;
+    font-size: 0.8em;
+  }
+
+  &__name {
+    display: inline-block;
+    margin-right: 0.5em;
+  }
+
+  &__link-list {
+    display: inline-block;
+  }
+
+  &__link {
+    color: colors.$blue;
+    margin-right: 0.25em;
+
+    & > svg {
+      vertical-align: middle;
+    }
+  }
+
+  &__description {
+    color: colors.$foreground-secondary;
+    font-size: 0.8em;
+  }
+
+  &__logo {
+    display: block;
+    width: settings.$project-logo-size;
+    height: settings.$project-logo-size;
+    background: colors.$background-gradient;
+    border: 1px solid colors.$highlight;
+    border-radius: 1em;
+    padding: 0.5em;
+  }
+
+  &__info-container {
+    margin: auto 0;
+  }
+}
+
+.college-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.college-card {
+  display: flex;
+  font-family: "Poppins";
+  gap: 1.5em;
+
+  &__date {
+    color: colors.$highlight;
+    text-transform: uppercase;
+    font-size: 0.8em;
+  }
+
+  &__name {
+    margin-right: 0.5em;
+  }
+
+  &__major {
+    color: colors.$foreground-secondary;
+    font-size: 0.8em;
+  }
+
+  &__logo {
+    display: block;
+    width: settings.$college-logo-size;
+    height: settings.$college-logo-size;
+    background: colors.$background-gradient;
+    border: 1px solid colors.$highlight;
+    border-radius: 1em;
+    padding: 0.5em;
+  }
+
+  &__logo-container {
+    margin: auto 0;
+  }
+
+  &__info-container {
+    margin: auto 0;
+  }
+}
+
+.affiliation-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  & > *:not(:last-child) {
+    padding-bottom: 1em;
+    border-bottom: 1px solid colors.$background-tertiary;
+  }
+}
+
+.affiliation-card {
+  display: flex;
+  font-family: "Poppins";
+  gap: 1.5em;
+
+  &__name {
+    margin-right: 0.5em;
+  }
+
+  &__description {
+    color: colors.$foreground-secondary;
+    font-size: 0.8em;
+  }
+
+  &__logo {
+    display: block;
+    width: settings.$affiliation-logo-size;
+    height: settings.$affiliation-logo-size;
+    background: colors.$background-gradient;
+    border: 1px solid colors.$highlight;
+    border-radius: 0.75em;
+    padding: 0.5em;
+  }
+
+  &__info-container {
+    margin: auto 0;
+  }
+}

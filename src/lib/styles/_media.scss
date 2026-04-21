@@ -1,0 +1,124 @@
+@use "colors";
+
+@media screen and (max-width: 1080px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 468px) and (max-width: 768px) {
+  body {
+    font-size: 16px !important;
+  }
+
+  .sidebar {
+    position: relative;
+    flex-direction: row;
+    top: 0; left: 0;
+    width: 100%;
+    padding: 2em;
+    border: none;
+    border-bottom: 1px solid colors.$background-tertiary;
+
+    &__portrait-container {
+      align-items: end;
+      padding: 0;
+      padding-right: 2em;
+      border: none;
+    }
+
+    &__nav-container {
+      align-items: start;
+      padding: 0;
+    }
+
+    &__cr-notice {
+      display: none;
+    }
+  }
+
+  .section-container {
+    margin-top: 2em;
+    margin-left: 0;
+  }
+
+  .timeline-item__marker-container {
+      display: none;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  body {
+    font-size: 16px !important;
+  }
+
+  .sidebar {
+    position: relative;
+    top: 0; left: 0;
+    width: 100%;
+    padding: 2em;
+    border: none;
+    border-bottom: 1px solid colors.$background-tertiary;
+
+    &__portrait-container {
+      border: none;
+      padding: 0;
+    }
+
+    &__cr-notice {
+      display: none;
+    }
+  }
+
+  .section-container {
+    margin: 0;
+    text-align: center;
+  }
+
+  .affiliation-card {
+    flex-direction: column;
+    gap: 0.5em;
+
+    &__logo-container {
+      margin: 0 auto;
+    }
+  }
+
+  .college-card-list {
+    gap: 2em;
+  }
+
+  .college-card {
+    flex-direction: column;
+    gap: 0.5em;
+
+    &__logo-container {
+      margin: 0 auto;
+    }
+  }
+
+  .project-card {
+    flex-direction: column;
+    gap: 0.5em;
+
+    &__logo-container {
+      margin: 0 auto;
+    }
+  }
+
+  .timeline-item {
+    &__marker-container {
+      display: none;
+    }
+
+    &__component-container {
+      padding-bottom: 2.5em;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    font-size: 14px !important;
+  }
+}

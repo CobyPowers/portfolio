@@ -1,49 +1,73 @@
+@use "sass:color";
+
 @use "colors";
-@use "buttons";
 @use "settings";
-@use "sections/import";
+@use "text";
+@use "components/buttons";
+@use "components/cards";
+@use "components/sidebar";
+@use "components/timeline";
 
 @import "https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Pacifico&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Pacifico&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap";
 
 * {
   box-sizing: border-box;
+
   margin: 0;
   padding: 0;
 
   font-family: inherit;
-  font-weight: inherit;
   font-size: inherit;
+  text-decoration: none;
 
   color: inherit;
-  background-color: inherit;
+
   border: none;
 }
 
 body {
+  position: relative;
   display: flex;
+  flex-direction: column;
+  align-items: center;
 
   font-family: "JetBrains Mono", monospace;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 18px;
+  // font-size: min(1vw, 18px);
 
   color: colors.$foreground-primary;
   background-color: colors.$background-primary;
-
-  margin-left: settings.$sidebar-width;
-  margin-top: 20vh;
 }
 
-.text {
-  &--signature {
-    font-family: "Pacifico", cursive;
-    font-size: 1.5em;
-    color: colors.$foreground-tertiary;
-  }
+.section-container {
+  margin-left: calc(settings.$sidebar-width * 1.35 - settings.$section-padding);
+  margin-top: calc(20vh + settings.$sidebar-vertical-padding);
+  padding: settings.$section-padding;
+  padding-top: 0;
+  margin-bottom: 10vh;
+  line-height: 1.6em;
+  max-width: settings.$section-width;
+  height: 100%;
 
-  &--blue {
-    color: colors.$blue;
+  & > *:first-child {
+    margin-top: 0;
   }
+}
+
+.body-glow {
+  display: block;
+  position: fixed;
+  left: settings.$sidebar-width; right: 0;
+  top: 0; bottom: 0;
+  margin: auto;
+  opacity: 10%;
+  vertical-align: middle;
+  filter: blur(100px);
+  z-index: -1;
+  user-select: none;
 }
 
 h1 {
@@ -74,70 +98,12 @@ h5,
 h6 {
   text-transform: uppercase;
   font-weight: bold;
-  margin-bottom: 0.8em;
+  margin: 0.5em 0;
+  line-height: 1.75em;
 }
 
-.sidebar-container {
-  position: fixed;
-  left: calc(50% - (settings.$sidebar-width * 0.75) - (settings.$section-width * 0.5));
-  top: 20vh;
-  width: settings.$sidebar-width;
-  height: fit-content;
-  padding: 3.5em 0;
-  border-right: 1px solid colors.$background-tertiary;
+p {
+  line-height: 1.75em;
 }
 
-.sidebar {
-  &__top-container,
-  &__bottom-container {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2em 0;
-    gap: 1.25em;
-  }
-
-  &__top-container {
-    padding-top: 0;
-    border-bottom: 1px solid colors.$background-tertiary;
-  }
-
-  &__portrait {
-    display: block;
-    width: calc(100% - 8px);
-    height: calc(100% - 8px);
-    border-radius: 1.75em;
-    border: 0.5em solid colors.$background-primary;
-  }
-
-  &__portrait-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 11m;
-    height: 11em;
-    background: linear-gradient(-45deg, colors.$purple, colors.$orange);
-    border-radius: 2em;
-  }
-}
-
-.section-container {
-  width: settings.$section-width;
-  height: 100%;
-  margin: auto;
-  padding-top: 4.5em;
-  line-height: 1.6em;
-  overflow-wrap: none;
-
-  h1, h2, h3, h4, h5, h6 {
-      margin-bottom: 1.25em;
-  }
-
-  & .text--signature {
-    display: inline-block;
-    margin-top: 0.75em;
-  }
-}
-
+@import "media";
