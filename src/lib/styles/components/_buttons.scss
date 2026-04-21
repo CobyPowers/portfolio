@@ -65,7 +65,7 @@
 
   &:active {
     border-top: 1px solid colors.$background-tertiary;
-    border-bottom: 1px solid color.adjust(colors.$highlight, $lightness: -15);
+    border-bottom: 1px solid color.adjust(colors.$highlight, $lightness: -15%);
     box-shadow: inset 0px 0px 7px colors.$background-primary;
   }
 

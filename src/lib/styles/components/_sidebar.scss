@@ -62,7 +62,7 @@
       display: block;
       width: calc(100% - 8px);
       height: calc(100% - 8px);
-      background: linear-gradient(135deg, color.adjust(colors.$purple, $lightness: 10), color.adjust(colors.$orange, $lightness: 17));
+      background: linear-gradient(135deg, color.adjust(colors.$purple, $lightness: 10%), color.adjust(colors.$orange, $lightness: 10%));
       mix-blend-mode: color;
       border-radius: 2em;
     }

@@ -36,10 +36,12 @@ body {
   font-family: "JetBrains Mono", monospace;
   font-weight: normal;
   font-size: 18px;
-  // font-size: min(1vw, 18px);
 
   color: colors.$foreground-primary;
   background-color: colors.$background-primary;
+
+  opacity: 0;
+  transition: opacity 0.25s;
 }
 
 .section-container {
@@ -53,7 +55,7 @@ body {
   height: 100%;
 
   & > *:first-child {
-    margin-top: 0;
+    margin-top: -0.25em;
   }
 }
 
