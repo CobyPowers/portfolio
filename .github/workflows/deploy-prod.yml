@@ -18,6 +18,7 @@ jobs:
             set -e
             cd ~/portfolio
             git reset --hard
+            git pull
             npm run build
             pkill node || true
             node build &
