@@ -12,5 +12,5 @@ $purple: #cba6f7;
 $pink: #f5c2e7;
 $blue: #89b4fa;
 
-$background-gradient-lightened: linear-gradient(color.adjust($background-tertiary, $lightness: 5), color.adjust($background-secondary, $lightness: 2));
+$background-gradient-lightened: linear-gradient(color.adjust($background-tertiary, $lightness: 5%), color.adjust($background-secondary, $lightness: 2%));
 $background-gradient: linear-gradient($background-tertiary, $background-secondary);

@@ -16,9 +16,9 @@
 <br />
 
 <p>
-  Feel free to use the buttons on the left to navigate around my site. If you
-  like my skills and want to get in touch, use the social media links below my
-  profile.
+  If you wish to see my projects or educational affiliations, use the navigation
+  buttons to the left. If you like my skills and wish to reach out, use the
+  links below my portrait.
 </p>
 
 <br />

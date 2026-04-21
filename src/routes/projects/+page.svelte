@@ -7,14 +7,11 @@
 
 <h3>Skills</h3>
 
-<p>
-  {#each Object.entries(skills) as [k, v]}
+{#each Object.entries(skills) as [k, v], i}
+  <p style="font-size: 0.9em; margin-bottom: 1em;">
     <b>{k[0].toUpperCase() + k.slice(1)}</b>: {v.join(", ")}
-    <br />
-  {/each}
-</p>
-
-<br />
+  </p>
+{/each}
 
 <h3>Projects</h3>
 

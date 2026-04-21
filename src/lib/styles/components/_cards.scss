@@ -21,7 +21,7 @@
 
   &__name {
     display: inline-block;
-    margin-right: 0.5em;
+    margin-right: 0.25em;
   }
 
   &__link-list {
@@ -29,11 +29,18 @@
   }
 
   &__link {
-    color: colors.$blue;
+    color: colors.$foreground-secondary;
     margin-right: 0.25em;
 
     & > svg {
       vertical-align: middle;
+      transition-duration: 0.25s;
+      transition-property: transform, color;
+
+      &:hover {
+        transform: rotate(-15deg);
+        color: colors.$blue;
+      }
     }
   }
 
@@ -116,7 +123,7 @@
 .affiliation-card {
   display: flex;
   font-family: "Poppins";
-  gap: 1.5em;
+  gap: 1.25em;
 
   &__name {
     margin-right: 0.5em;
@@ -125,6 +132,7 @@
   &__description {
     color: colors.$foreground-secondary;
     font-size: 0.8em;
+    line-height: 2em;
   }
 
   &__logo {
@@ -134,7 +142,7 @@
     background: colors.$background-gradient;
     border: 1px solid colors.$highlight;
     border-radius: 0.75em;
-    padding: 0.5em;
+    padding: 0.35em;
   }
 
   &__info-container {
