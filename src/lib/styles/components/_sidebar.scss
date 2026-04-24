@@ -13,10 +13,11 @@
   height: fit-content;
   padding: settings.$sidebar-vertical-padding 0;
   border-right: 1px solid colors.$background-tertiary;
+  user-select: none;
 
   &__logo {
     position: absolute;
-    fill: colors.$highlight;
+    fill: colors.$background-tertiary;
     top: 0; left: 0; right: 0;
     margin: auto;
     height: 2em;

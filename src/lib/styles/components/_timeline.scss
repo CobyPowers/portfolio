@@ -26,7 +26,7 @@
 
     &.last {
       &::before {
-        background: linear-gradient(colors.$background-tertiary, transparent 75%);
+        background: linear-gradient(colors.$highlight, transparent 75%);
       }
     }
 
@@ -48,7 +48,7 @@
       left: 50%;
       width: 1px; 
       height: 100%;
-      background-color: colors.$background-tertiary;
+      background-color: colors.$highlight;
     }
 
     /* Circle */
@@ -61,7 +61,7 @@
       width: 0.5em; 
       height: 0.5em;
       border-radius: 50%;
-      background-color: colors.$background-tertiary;
+      background-color: colors.$highlight;
     }
   }
 
