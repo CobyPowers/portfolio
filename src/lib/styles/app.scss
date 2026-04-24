@@ -44,6 +44,11 @@ body {
   transition: opacity 0.25s;
 }
 
+::selection {
+  color: colors.$background-primary;
+  background-color: colors.$blue;
+}
+
 .section-container {
   margin-left: calc(settings.$sidebar-width * 1.35 - settings.$section-padding);
   margin-top: calc(20vh + settings.$sidebar-vertical-padding);
